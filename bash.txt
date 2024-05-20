@@ -1,0 +1,11 @@
+/career-portal
+    /images
+        banner.jpg
+        tour_guide.jpg
+        travel_consultant.jpg
+        hotel_manager.jpg
+    index.html
+    job-listings.html
+    about.html
+    contact.html
+    styles.css
