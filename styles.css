@@ -6,7 +6,6 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Header */
 header {
     background-color: #333;
     color: white;
@@ -16,8 +15,14 @@ header {
     padding: 10px 20px;
 }
 
-header .logo h1 {
-    margin: 0;
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+    margin-right: 20px; /* Adjust margin as needed */
 }
 
 nav ul {
@@ -36,7 +41,6 @@ nav ul li a {
     text-decoration: none;
 }
 
-/* Banner */
 .banner {
     background-image: url('images/banner.jpg');
     background-size: cover;
@@ -49,10 +53,11 @@ nav ul li a {
 .banner h2 {
     font-size: 3em;
     margin: 0 0 20px 0;
+    color: #0099a9; /* Secondary color from logo */
 }
 
 .banner button {
-    background-color: #ff7f50;
+    background-color: #0099a9; /* Secondary color from logo */
     border: none;
     padding: 15px 30px;
     font-size: 1.2em;
@@ -61,22 +66,21 @@ nav ul li a {
     border-radius: 5px;
 }
 
-/* Main Section */
 main {
     display: flex;
+    flex-direction: column;
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Job Listings */
 .job-listings {
     flex: 3;
     margin-right: 20px;
 }
 
 .job-listings h3 {
-    background-color: #333;
+    background-color: #0099a9; /* Secondary color from logo */
     color: white;
     padding: 10px;
     margin-top: 0;
@@ -90,6 +94,11 @@ main {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     display: flex;
     align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.job:hover {
+    transform: translateY(-10px);
 }
 
 .job img {
@@ -97,7 +106,7 @@ main {
     height: 100px;
     margin-right: 20px;
     border-radius: 50%;
-    object-fit: cover; /* Ensures the image covers the given width and height */
+    object-fit: cover;
 }
 
 .job h4 {
@@ -108,7 +117,6 @@ main {
     margin: 5px 0;
 }
 
-/* Filters */
 aside {
     flex: 1;
 }
@@ -122,6 +130,7 @@ aside {
 
 .filters h3 {
     margin-top: 0;
+    color: #0099a9; /* Secondary color from logo */
 }
 
 .filters label {
@@ -137,27 +146,42 @@ aside {
     border: 1px solid #ddd;
 }
 
-/* Job Detail */
 .job-detail {
     background-color: white;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    max-width: 800px;
-    margin: 20px auto;
+    margin: 20px 0;
+}
+
+.job-detail .job-header {
+    margin-bottom: 20px;
+}
+
+.job-detail .job-header p {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.job-detail .job-header p img.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
 }
 
 .job-detail img {
     width: 100%;
     height: auto;
-    max-width: 400px;
+    max-width: 600px; /* Reduced image size */
     display: block;
-    margin: 0 auto 20px auto;
+    margin: 20px auto;
     border-radius: 5px;
 }
 
 .job-detail h3 {
     margin-top: 20px;
+    color: #0099a9; /* Secondary color from logo */
 }
 
 .job-detail ul {
@@ -166,7 +190,7 @@ aside {
 }
 
 .job-detail button {
-    background-color: #ff7f50;
+    background-color: #0099a9; /* Secondary color from logo */
     border: none;
     padding: 15px 30px;
     font-size: 1.2em;
@@ -183,7 +207,6 @@ aside {
     text-decoration: none;
 }
 
-/* Footer */
 footer {
     background-color: #333;
     color: white;
